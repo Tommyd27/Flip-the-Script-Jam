@@ -1,4 +1,11 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=2 format=3 uid="uid://cl1dk71838tje"]
+=======
+
+=======
+[gd_scene load_steps=2 format=3 uid="uid://cl1dk71838tje"]
+>>>>>>> 420380a183b5ee2a1dc559723e263b8614bbb0cd
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://HomeScreen.gd" id="1_p36na"]
 

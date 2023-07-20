@@ -68,14 +68,17 @@ _data = {
 script = ExtResource("1_5t06x")
 
 [node name="Base" type="Sprite2D" parent="."]
-position = Vector2(94, 98)
+position = Vector2(0, 1)
 texture = SubResource("CompressedTexture2D_ptcax")
 region_enabled = true
 region_rect = Rect2(0.0409851, 0.152348, 64.4909, 126.879)
 
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [node name="Bow" type="AnimatedSprite2D" parent="."]
-position = Vector2(95, 91)
-rotation = 3.14159
+position = Vector2(2.38419e-07, -5)
+rotation = -3.14159
 scale = Vector2(0.598958, 0.598958)
 sprite_frames = SubResource("SpriteFrames_0jutn")
 animation = &"Shoot"
@@ -84,3 +87,7 @@ animation = &"Shoot"
 libraries = {
 "": SubResource("AnimationLibrary_8on12")
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
