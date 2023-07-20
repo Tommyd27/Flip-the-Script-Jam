@@ -1,3 +1,97 @@
-[gd_scene format=3 uid="uid://d02huba3d2nvv"]
+[gd_scene load_steps=13 format=3 uid="uid://d02huba3d2nvv"]
+
+[ext_resource type="Script" path="res://tower.gd" id="1_5t06x"]
+[ext_resource type="Texture2D" uid="uid://c1n0ywhkj3mty" path="res://Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Weapon.png" id="2_1f7pn"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ptcax"]
+load_path = "res://.godot/imported/Tower 01.png-c9753e8018291d8be2d41511b1b42b87.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1cfb"]
+atlas = ExtResource("2_1f7pn")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnyuq"]
+atlas = ExtResource("2_1f7pn")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dervd"]
+atlas = ExtResource("2_1f7pn")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3opp"]
+atlas = ExtResource("2_1f7pn")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkokt"]
+atlas = ExtResource("2_1f7pn")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7jye"]
+atlas = ExtResource("2_1f7pn")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0jutn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1cfb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnyuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dervd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3opp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkokt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7jye")
+}],
+"loop": true,
+"name": &"Shoot",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_wma8x"]
+resource_name = "Shoot"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:sprite_frames")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8on12"]
+_data = {
+"Shoot": SubResource("Animation_wma8x")
+}
 
 [node name="Tower" type="Node2D"]
+script = ExtResource("1_5t06x")
+
+[node name="Base" type="Sprite2D" parent="."]
+texture = SubResource("CompressedTexture2D_ptcax")
+region_enabled = true
+region_rect = Rect2(0.0409851, 0.152348, 64.4909, 126.879)
+
+[node name="Bow" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.750001, -9.25)
+rotation = 3.14159
+scale = Vector2(0.598958, 0.598958)
+sprite_frames = SubResource("SpriteFrames_0jutn")
+animation = &"Shoot"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bow"]
+libraries = {
+"": SubResource("AnimationLibrary_8on12")
+}
