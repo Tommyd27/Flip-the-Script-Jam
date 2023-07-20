@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://wowikrrc0l2o"]
+[gd_scene load_steps=4 format=3 uid="uid://wowikrrc0l2o"]
 
 [ext_resource type="Texture2D" uid="uid://q5srm2bc03gn" path="res://Lilguy.png" id="1_443wh"]
+[ext_resource type="Script" path="res://Minion Goofy Guy.gd" id="1_mgxkd"]
 
 [sub_resource type="Curve2D" id="Curve2D_skw2h"]
 _data = {
@@ -11,13 +12,18 @@ point_count = 11
 [node name="Node2D" type="Node2D"]
 
 [node name="Path2D" type="Path2D" parent="."]
+position = Vector2(47, -67)
+scale = Vector2(6.13415, 5.84188)
 curve = SubResource("Curve2D_skw2h")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(-28.4383, 47.1301)
-progress = 211.098
+[node name="Minion Goofy Guy" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-29.971, 47.0138)
+progress = 212.635
 rotates = false
+script = ExtResource("1_mgxkd")
 
-[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/Minion Goofy Guy"]
 texture_filter = 1
 texture = ExtResource("1_443wh")
+
+[node name="Camera2D" type="Camera2D" parent="."]
