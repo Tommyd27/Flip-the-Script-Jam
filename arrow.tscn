@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bar34yi526hrf"]
+
+[ext_resource type="Texture2D" uid="uid://0bm2qjk3w25p" path="res://Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Projectile.png" id="1_5ds3g"]
+
+[node name="Arrow" type="Node2D"]
+
+[node name="ArrowSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_5ds3g")
+region_enabled = true
+region_rect = Rect2(0.159698, 0.133766, 8.3781, 39.8635)

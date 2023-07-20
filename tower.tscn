@@ -58,18 +58,6 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_wma8x"]
 resource_name = "Shoot"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:sprite_frames")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8on12"]
 _data = {
@@ -80,12 +68,13 @@ _data = {
 script = ExtResource("1_5t06x")
 
 [node name="Base" type="Sprite2D" parent="."]
+position = Vector2(94, 98)
 texture = SubResource("CompressedTexture2D_ptcax")
 region_enabled = true
 region_rect = Rect2(0.0409851, 0.152348, 64.4909, 126.879)
 
 [node name="Bow" type="AnimatedSprite2D" parent="."]
-position = Vector2(-0.750001, -9.25)
+position = Vector2(95, 91)
 rotation = 3.14159
 scale = Vector2(0.598958, 0.598958)
 sprite_frames = SubResource("SpriteFrames_0jutn")
