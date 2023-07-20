@@ -1,14 +1,16 @@
-[gd_scene format=3 uid="uid://dt5820lymhupm"]
+[gd_scene load_steps=2 format=3 uid="uid://dt5820lymhupm"]
+
+[ext_resource type="Script" path="res://TextEdit.gd" id="1_rri16"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Node" type="Node" parent="."]
-
-[node name="Node2" type="Node" parent="."]
-
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 283.0
-offset_top = 99.0
-offset_right = 1085.0
-offset_bottom = 548.0
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
 text = "BALLS"
+script = ExtResource("1_rri16")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
