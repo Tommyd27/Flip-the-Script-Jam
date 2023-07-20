@@ -1,7 +1,14 @@
-[gd_scene format=3 uid="uid://dt5820lymhupm"]
+[gd_scene format=3 uid="uid://bbm4cf168e4u2"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Node" type="Node" parent="."]
 
 [node name="Node2" type="Node" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 283.0
+offset_top = 99.0
+offset_right = 1085.0
+offset_bottom = 548.0
+text = "BALLS"
