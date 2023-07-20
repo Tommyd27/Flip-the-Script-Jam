@@ -10,7 +10,11 @@ func _ready():
 func _process(delta):
 	pass
 
-
-
-func _on_button_pressed():
+func _on_play_button_pressed():
 	get_tree().change_scene_to_file("res://balls.tscn")
+
+func _on_select_map_pressed():
+	pass 
+
+func _on_exit_pressed():
+	get_tree().quit()

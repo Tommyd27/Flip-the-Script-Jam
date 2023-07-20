@@ -1,15 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://dh4th7oabhlc1"]
+[gd_scene load_steps=2 format=3 uid="uid://cl1dk71838tje"]
 
 [ext_resource type="Script" path="res://HomeScreen.gd" id="1_p36na"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(596, 176)
 script = ExtResource("1_p36na")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 345.0
-offset_top = 115.0
-offset_right = 724.0
-offset_bottom = 262.0
+[node name="Play Button" type="Button" parent="."]
+offset_left = -780.0
+offset_top = -400.0
+offset_right = -401.0
+offset_bottom = -253.0
+size_flags_horizontal = 3
 text = "PLAY"
+metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Select Map" type="Button" parent="."]
+offset_left = -780.0
+offset_top = -249.0
+offset_right = -401.0
+offset_bottom = -102.0
+size_flags_horizontal = 3
+text = "Select Map"
+metadata/_edit_use_anchors_ = true
+
+[node name="Exit" type="Button" parent="."]
+offset_left = -780.0
+offset_top = -99.0
+offset_right = -401.0
+offset_bottom = 48.0
+size_flags_horizontal = 3
+text = "Exit
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-596, -176)
+
+[connection signal="pressed" from="Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Select Map" to="." method="_on_select_map_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
