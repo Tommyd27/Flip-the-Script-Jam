@@ -1,8 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://wowikrrc0l2o"]
+[gd_scene load_steps=3 format=3 uid="uid://wowikrrc0l2o"]
 
-[ext_resource type="Script" path="res://Minion.gd" id="1_v70a5"]
+[ext_resource type="Texture2D" uid="uid://q5srm2bc03gn" path="res://Lilguy.png" id="1_443wh"]
+
+[sub_resource type="Curve2D" id="Curve2D_skw2h"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -48, 3, -14.1741, -19.2138, 14.1741, 19.2138, -26, -10, -7.24455, 19.8438, 7.24455, -19.8438, 7, -7, 0, 0, 0, 0, 31, 9, 0, 0, 0, 0, 31, 38, 0, 0, 0, 0, 6, 50, 0, 0, 0, 0, -30, 47, 0, 0, 0, 0, -51, 22, 0, 0, 0, 0, -48, 4, 0, 0, 0, 0, -48, 4, 0, 0, 0, 0, -48, 3)
+}
+point_count = 11
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Minion" type="Node2D" parent="."]
-script = ExtResource("1_v70a5")
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_skw2h")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-28.4383, 47.1301)
+progress = 211.098
+rotates = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
+texture_filter = 1
+texture = ExtResource("1_443wh")
