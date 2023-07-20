@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5aftrd3amix3"]
+
+[ext_resource type="Texture2D" uid="uid://q5srm2bc03gn" path="res://B - Lilguy.png" id="1_fnewr"]
+[ext_resource type="Script" path="res://B - Enemy.gd" id="1_p3uul"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BlueGuy" type="Node2D" parent="."]
+script = ExtResource("1_p3uul")
+
+[node name="Sprite2D" type="Sprite2D" parent="BlueGuy"]
+scale = Vector2(10, 10)
+texture = ExtResource("1_fnewr")
