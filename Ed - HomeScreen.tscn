@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://f7cqr2hdbaie"]
+
+[ext_resource type="Script" path="res://Ed - HomeScreen.gd" id="1_yuw2a"]
+
+[node name="Ed - HomeScreen" type="Node2D"]
+script = ExtResource("1_yuw2a")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Play Button" type="Button" parent="Camera2D"]
+offset_left = -192.0
+offset_top = -352.0
+offset_right = 192.0
+offset_bottom = -160.0
+theme_override_font_sizes/font_size = 60
+text = "Play"
+
+[node name="Map Select Button" type="Button" parent="Camera2D"]
+offset_left = -192.0
+offset_top = -96.0
+offset_right = 192.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 60
+text = "Map Select"
+
+[node name="Exit Button" type="Button" parent="Camera2D"]
+offset_left = -192.0
+offset_top = 160.0
+offset_right = 192.0
+offset_bottom = 352.0
+theme_override_font_sizes/font_size = 60
+text = "Exit
+"
+
+[connection signal="pressed" from="Camera2D/Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Camera2D/Map Select Button" to="." method="_on_map_select_button_pressed"]
+[connection signal="pressed" from="Camera2D/Exit Button" to="." method="_on_exit_button_pressed"]

@@ -12,4 +12,4 @@ func _process(delta):
 func _input(event):
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_ESCAPE:
-			get_tree().change_scene_to_file("res://HomeScreen.tscn")
+			get_tree().change_scene_to_file("res://Ed - HomeScreen.tscn")
